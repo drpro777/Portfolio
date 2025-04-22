@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Stack Developer Portfolio</title>
+  <link rel="stylesheet" href="port.css" />
+  <link rel="stylesheet" href="animation.css" />
+  <link rel="stylesheet" href="enha.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Weather Widget -->
+  <div class="weather-widget">
+    <div id="weather-display"></div>
+    <div id="time-display"></div>
+  </div>
+
+  <!-- Particle Background -->
+  <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+  <div class="portfolio-container">
+    <!-- Left Navigation -->
+    <nav class="sidebar">
+      <div class="profile-container">
+        <div class="profile-img-container">
+          <div class="profile-img">
+            <img src="profile1.jpeg" alt="Profile Picture" />
+          </div>
+        </div>
+        <h2 class="name">Muhammad ALi</h2>
+        <p class="title">Full Stack Developer</p>
+      </div>
+      
+      <ul class="nav-links">
+        <li class="active" data-section="home"><i class="fas fa-home"></i> Home</li>
+        <li data-section="about"><i class="fas fa-user"></i> About Me</li>
+        <li data-section="skills"><i class="fas fa-code"></i> Skills</li>
+        <li data-section="experience"><i class="fas fa-briefcase"></i> Experience</li>
+        <li data-section="education"><i class="fas fa-graduation-cap"></i> Education</li>
+        <li data-section="contact"><i class="fas fa-envelope"></i> Contact</li>
+      </ul>
+      
+      <div class="social-links">
+        <a href="https://github.com/drpro77" class="rainbow-border"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/drpro77" class="rainbow-border"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="rainbow-border"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/deep_islamic7/?utm_source=ig_web_button_share_sheet" class="rainbow-border"><i class="fab fa-instagram"></i></a>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <!-- Home Section -->
+      <section id="home" class="section active">
+        <div class="hero-content">
+          <h1 class="hero-title">Hello, I'm <span class="highlight-text">Muhammad ALI</span></h1>
+          <h2 class="hero-subtitle">Full Stack Developer</h2>
+          <p class="hero-description">I build amazing web experiences with cutting-edge technologies</p>
+          <div class="hero-cta">
+            <button class="btn primary-btn" id="view-work-btn">View My Work</button>
+            <button class="btn secondary-btn" id="contact-btn">Contact Me</button>
+          </div>
+        </div>
+        <div class="hero-animation">
+          <div class="cube-container">
+            <div class="cube">
+              <div class="face front"><i class="fab fa-react"></i></div>
+              <div class="face back"><i class="fab fa-node-js"></i></div>
+              <div class="face right"><i class="fab fa-js"></i></div>
+              <div class="face left"><i class="fab fa-html5"></i></div>
+              <div class="face top"><i class="fab fa-css3-alt"></i></div>
+              <div class="face bottom"><i class="fab fa-python"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-content">
+          <div class="about-details">
+            <div class="about-text">
+              <p>I am a passionate Full Stack Developer with expertise in building scalable web applications using modern technologies. With 1 years of experience in the company, I've worked on various projects ranging from small business websites to complex enterprise applications.</p>
+              <p>I love solving complex problems and creating intuitive user experiences. My approach is to write clean, maintainable code that makes life easier for both users and fellow developers.</p>
+            </div>
+            <div class="personal-info">
+              <h3>Personal Details</h3>
+              <ul>
+                <li><span>Name:</span> Muhammad ALi</li>
+                <li><span>Age:</span> 19 </li>
+                <li><span>Location:</span> Pakistan Gujrat</li>
+                <li><span>Email:</span>muhammad.ali.020457</li>
+                <li><span>Phone:</span>Error</li>
+                <li><span>Availability:</span> Available for Web Designing</li>
+              </ul>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-count="10">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="9">0</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="1">0</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="2">0</div>
+              <div class="stat-label">Awards</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section">
+        <h2 class="section-title">My Skills</h2>
+        <div class="section-content">
+          <div class="skills-container">
+            <div class="skill-category">
+              <h3>Frontend Development</h3>
+              <div class="skills-list">
+                <div class="skill-item" data-name="HTML5" data-percentage="95">
+                  <div class="skill-info">
+                    <span class="skill-name">HTML</span>
+                    <span class="skill-percentage">95%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="CSS3" data-percentage="90">
+                  <div class="skill-info">
+                    <span class="skill-name">CSS</span>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="JavaScript" data-percentage="68">
+                  <div class="skill-info">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percentage">68%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="React" data-percentage="10">
+                  <div class="skill-info">
+                    <span class="skill-name">Angular</span>
+                    <span class="skill-percentage">10%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Backend Development</h3>
+              <div class="skills-list">
+                <div class="skill-item" data-name="Node.js" data-percentage="55">
+                  <div class="skill-info">
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-percentage">55%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="Express" data-percentage="10">
+                  <div class="skill-info">
+                    <span class="skill-name">Express</span>
+                    <span class="skill-percentage">10%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="MongoDB" data-percentage="60">
+                  <div class="skill-info">
+                    <span class="skill-name">MongoDB</span>
+                    <span class="skill-percentage">60%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="SQL" data-percentage="30">
+                  <div class="skill-info">
+                    <span class="skill-name">SQL</span>
+                    <span class="skill-percentage">30%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Other Skills</h3>
+              <div class="skills-list">
+                <div class="skill-item" data-name="Git" data-percentage="70">
+                  <div class="skill-info">
+                    <span class="skill-name">Git</span>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="Docker" data-percentage="75">
+                  <div class="skill-info">
+                    <span class="skill-name">Graphic Designing</span>
+                    <span class="skill-percentage">75%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="AWS" data-percentage="82">
+                  <div class="skill-info">
+                    <span class="skill-name">UX</span>
+                    <span class="skill-percentage">82%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-name="UI/UX" data-percentage="80">
+                  <div class="skill-info">
+                    <span class="skill-name">UI</span>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="skill-progress">
+                    <div class="progress-bar" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-content">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Senior Full Stack Developer</h3>
+                <h4>Tech Innovations Inc.</h4>
+                <p class="timeline-date">2025 - Present</p>
+                <p>Leading a team of developers to build enterprise-level web applications. Responsible for architecture decisions, code reviews, and implementing best practices. Developed a microservices architecture that improved system scalability by 40%.</p>
+                <div class="tags">
+                  <span>Html</span>
+                  <span>Node.js</span>
+                  <span>Css</span>
+                  <span>js</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Full Stack Developer</h3>
+                <h4>Digital Solutions </h4>
+                <p class="timeline-date">2014 - 2025</p>
+                <p>Developed and maintained multiple client websites and web applications. Implemented responsive designs and ensured cross-browser compatibility. Created RESTful APIs and integrated third-party services.</p>
+                <div class="tags">
+                  <span>JavaScript</span>
+                  <span>Express</span>
+                  <span>Bootstrap</span>
+                  <span>Angular</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Frontend Developer</h3>
+                <h4>WebCraft Studios</h4>
+                <p class="timeline-date">2024 - 2025</p>
+                <p>Focused on creating engaging user interfaces and implementing complex frontend functionalities. Collaborated with designers to translate mockups into working websites. Optimized website performance and improved load times.</p>
+                <div class="tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Figma</span>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="section-content">
+          <div class="education-container">
+            <div class="education-card">
+              <div class="card-content">
+                <div class="card-front">
+                  <div class="education-icon">
+                    <i class="fas fa-university"></i>
+                  </div>
+                  <h3>Matric in Science</h3>
+                  <h4>Government</h4>
+                  <p>2018 - 2020</p>
+                </div>
+
+                <div class="card-back">
+                  <h3>Master's in Computer Science</h3>
+                  <p>Specialized in Artificial Intelligence and Web Technologies. Graduated with honors and completed a thesis on "Machine Learning Applications in Web Development".</p>
+                  <ul>
+                    <li>Advanced Algorithms</li>
+                    <li>Machine Learning</li>
+                    <li>Web Systems Architecture</li>
+                    <li>Database Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="education-card">
+              <div class="card-content">
+                <div class="card-front">
+                  <div class="education-icon">
+                    <i class="fas fa-university"></i>
+                  </div>
+                  <h3>Bachelor's in Computer Engineering</h3>
+                  <h4>Private</h4>
+                  <p>2024 - 2025</p>
+                </div>
+                <div class="card-back">
+                  <h3>Bachelor's in Computer Engineering</h3>
+                  <p>Comprehensive education in computer hardware and software systems. Participated in multiple hackathons and coding competitions.</p>
+                  <ul>
+                    <li>Data Structures</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>Computer Networks</li>
+                    <li>Software Engineering</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="education-card">
+              <div class="card-content">
+                <div class="card-front">
+                  <div class="education-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <h3>Full Stack Web Development</h3>
+                  <h4>Web & Graphic Designing Certification</h4>
+
+                  <p>2024-2025</p>
+                </div>
+                <div class="card-back">
+                  <h3>Full Stack Web Development</h3>
+                  <p>Intensive course covering modern web development technologies and practices. Built several full-stack applications as part of the curriculum.</p>
+                  <ul>
+                    <li>Frontend Frameworks</li>
+                    <li>Backend Development</li>
+                    <li>Database Design</li>
+                    <li>API Development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="section-content">
+          <div class="contact-container">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h3>Location</h3>
+                  <p>Gujrat Pakistan</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>muhammad.ali.020457</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <p>error</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h3>Working Hours</h3>
+                  <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <form id="contactForm" action="#">
+                <div class="form-group">
+                  <input type="text" id="name" placeholder="Your Name" required name="name">
+                  <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" placeholder="Your Email" required name="email">
+                  <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="subject" placeholder="Subject" required name="subject">
+                  <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                  <textarea id="message" placeholder="Your Message" required name="message"></textarea>
+                  <span class="focus-border"></span>
+                </div>
+                <button type="submit" class="btn primary-btn" id="submitBtn">Send Message</button>
+              </form>
+              <div id="formStatus" class="form-status"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="port.js"></script>
+  <script src="animation.js"></script>
+  <script src="particales.js"></script>
+  <script src="weather.js"></script>
+  <script>
+    // Initialize particle system
+    const canvas = document.getElementById('particleCanvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const particleSystem = new ParticleSystem(canvas);
+    particleSystem.animate();
+    
+    // Update canvas size on window resize
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+
+<script src="script.js"></script>
+<!-- Include EmailJS SDK (Add this in your HTML head or before closing body tag) -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS
+    (function () {
+        emailjs.init("ZKJrFdtrTk4pQYv1j"); // your public key
+    })();
+  
+
+    // Wait for DOM to load
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const submitBtn = document.getElementById("submitBtn");
+const originalButtonText = submitBtn.innerHTML;
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // prevent default form submission
+
+            submitBtn.disabled = true;
+  submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
+
+            // Optional: You can add a loading indicator here
+            // toastr.info("Sending message...", "Please wait");
+
+
+            // Send form using EmailJS
+            emailjs.sendForm("service_2m9hw9p", "template_14kaace", this)
+                .then(function (response) {
+                    submitBtn.disabled = false;
+        submitBtn.innerHTML = originalButtonText;
+                  console.log("Message Sent");
+                  
+                    form.reset(); // Clear the form
+                }, function (error) {
+
+                    console.error("EmailJS Error:", error);
+                    submitBtn.disabled = false;
+        submitBtn.innerHTML = originalButtonText;
+                });
+        });
+    });
+</script>
+</body>
+</html>

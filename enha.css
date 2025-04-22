@@ -1,0 +1,173 @@
+/* Enhanced Animations */
+@keyframes floatRotate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+      transform: translateY(0) rotate(360deg);
+    }
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 0 5px var(--violet);
+    }
+    50% {
+      box-shadow: 0 0 20px var(--pink);
+    }
+    100% {
+      box-shadow: 0 0 5px var(--violet);
+    }
+  }
+  
+  @keyframes borderFlow {
+    0% {
+      border-image-source: linear-gradient(45deg, var(--red), var(--sky-blue));
+    }
+    33% {
+      border-image-source: linear-gradient(45deg, var(--sky-blue), var(--violet));
+    }
+    66% {
+      border-image-source: linear-gradient(45deg, var(--violet), var(--pink));
+    }
+    100% {
+      border-image-source: linear-gradient(45deg, var(--pink), var(--red));
+    }
+  }
+  
+  /* Weather Display */
+  .weather-widget {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+    animation: glowPulse 3s infinite;
+  }
+  
+  .weather-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--light);
+  }
+  
+  .weather-info i {
+    color: var(--red);
+  }
+  
+  /* Enhanced 3D Elements */
+  .skill-card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateZ(30px) rotateX(10deg) rotateY(10deg);
+  }
+  
+  .experience-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .experience-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(45deg);
+    }
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Enhanced Timeline */
+  .timeline-item {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .timeline-item:hover {
+    transform: scale(1.02) translateX(10px);
+  }
+  
+  /* Particle Canvas */
+  .particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Enhanced Button Effects */
+  .btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 50%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  /* Enhanced Section Transitions */
+  .section {
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .section.active {
+    animation: sectionEntry 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes sectionEntry {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
