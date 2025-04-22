@@ -27,7 +27,7 @@ weatherDisplay.innerHTML = `
     `;
   } catch (error) {
     console.error('Error fetching weather:', error);
-    weatherDisplay.innerHTML = '<div class="weather-info">°C</div>';
+    weatherDisplay.innerHTML = '<div class="weather-info"></div>';
   }
 }
 

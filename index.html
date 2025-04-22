@@ -11,44 +11,55 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Weather Widget -->
-  <div class="weather-widget">
-    <div id="weather-display"></div>
-    <div id="time-display"></div>
-  </div>
-
-  <!-- Particle Background -->
-  <canvas id="particleCanvas" class="particle-canvas"></canvas>
-
-  <div class="portfolio-container">
-    <!-- Left Navigation -->
-    <nav class="sidebar">
-      <div class="profile-container">
-        <div class="profile-img-container">
-          <div class="profile-img">
-            <img src="profile1.jpeg" alt="Profile Picture" />
-          </div>
+  <body>
+    <!-- Weather Widget -->
+    <div class="weather-widget">
+      <div id="weather-display"></div>
+      <div id="time-display"></div>
+    </div>
+  
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-header">
+      <div class="mobile-nav-toggle">
+        <i class="fas fa-bars" id="mobile-menu-toggle"></i>
+      </div>
+  
+      <!-- Mobile Profile Info -->
+      <div class="mobile-profile-container">
+        <div class="profile-img">
+          <img src="profile1.jpeg" alt="Profile Picture" />
         </div>
         <h2 class="name">Muhammad ALi</h2>
         <p class="title">Full Stack Developer</p>
+  
+        <div class="social-links">
+          <a href="https://github.com/drpro77" class="rainbow-border"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/drpro77" class="rainbow-border"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="rainbow-border"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/deep_islamic7/?utm_source=ig_web_button_share_sheet" class="rainbow-border"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
-      
-      <ul class="nav-links">
-        <li class="active" data-section="home"><i class="fas fa-home"></i> Home</li>
-        <li data-section="about"><i class="fas fa-user"></i> About Me</li>
-        <li data-section="skills"><i class="fas fa-code"></i> Skills</li>
-        <li data-section="experience"><i class="fas fa-briefcase"></i> Experience</li>
-        <li data-section="education"><i class="fas fa-graduation-cap"></i> Education</li>
-        <li data-section="contact"><i class="fas fa-envelope"></i> Contact</li>
-      </ul>
-      
-      <div class="social-links">
-        <a href="https://github.com/drpro77" class="rainbow-border"><i class="fab fa-github"></i></a>
-        <a href="https://github.com/drpro77" class="rainbow-border"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="rainbow-border"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/deep_islamic7/?utm_source=ig_web_button_share_sheet" class="rainbow-border"><i class="fab fa-instagram"></i></a>
+    </div>
+  
+    <!-- Particle Background -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+  
+    <div class="portfolio-container">
+      <!-- Sidebar -->
+      <div class="sidebar-wrapper">
+        <nav class="sidebar">
+          <!-- Sidebar links only -->
+          <ul class="nav-links">
+            <li class="active" data-section="home"><i class="fas fa-home"></i> Home</li>
+            <li data-section="about"><i class="fas fa-user"></i> About Me</li>
+            <li data-section="skills"><i class="fas fa-code"></i> Skills</li>
+            <li data-section="experience"><i class="fas fa-briefcase"></i> Experience</li>
+            <li data-section="education"><i class="fas fa-graduation-cap"></i> Education</li>
+            <li data-section="contact"><i class="fas fa-envelope"></i> Contact</li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+  
 
     <!-- Main Content Area -->
     <main class="content">
@@ -515,5 +526,24 @@ const originalButtonText = submitBtn.innerHTML;
         });
     });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileToggle = document.getElementById("mobile-menu-toggle");
+    const sidebarWrapper = document.querySelector(".sidebar-wrapper");
+
+    mobileToggle.addEventListener("click", () => {
+      sidebarWrapper.classList.toggle("active");
+    });
+
+    // Optional: Close menu when clicking on a nav item (mobile UX)
+    const navLinks = document.querySelectorAll(".nav-links li");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        sidebarWrapper.classList.remove("active");
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
