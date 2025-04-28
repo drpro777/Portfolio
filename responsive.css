@@ -2,6 +2,9 @@
 
 /* Tablet and smaller desktops */
 @media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 240px;
+  }
     .skills-container {
       grid-template-columns: repeat(2, 1fr);
     }

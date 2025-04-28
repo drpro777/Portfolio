@@ -1,4 +1,4 @@
-// DOM Elements
+
 const navLinks = document.querySelectorAll('.nav-links li');
 const sections = document.querySelectorAll('.section');
 const contactForm = document.getElementById('contactForm');
@@ -6,30 +6,24 @@ const formStatus = document.getElementById('formStatus');
 const viewWorkBtn = document.getElementById('view-work-btn');
 const contactBtn = document.getElementById('contact-btn');
 
-// Initialize the portfolio
 document.addEventListener('DOMContentLoaded', () => {
-  // Event listeners for navigation
+  
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      // Remove active class from all links
       navLinks.forEach(item => item.classList.remove('active'));
       
-      // Add active class to clicked link
       link.classList.add('active');
       
-      // Show the corresponding section
       const sectionId = link.getAttribute('data-section');
       sections.forEach(section => {
         section.classList.remove('active');
         if (section.id === sectionId) {
           section.classList.add('active');
           
-          // If the section is skills, animate the skill bars
           if (sectionId === 'skills') {
             animateSkillBars();
           }
           
-          // If the section is about, animate stats
           if (sectionId === 'about') {
             animateStats();
           }
@@ -112,8 +106,8 @@ function handleFormSubmit(e) {
     });
   }, 1500);
   
-  // Show loading status
-  showFormStatus('Sending message...', true);
+
+  showFormStatus('𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝚂𝚎𝚗𝚍𝚒𝚗𝚐...', true);
 }
 
 // Function to show form status messages

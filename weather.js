@@ -1,8 +1,6 @@
-// Weather and Time Display
 const weatherDisplay = document.getElementById('weather-display');
 const timeDisplay = document.getElementById('time-display');
 
-// Fetch weather data
 async function getWeather() {
   try {
     const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London,uk&callback=test&appid={API key}');

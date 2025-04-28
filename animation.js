@@ -13,22 +13,22 @@ function animateSkillBars() {
     // Reset the width first to ensure animation plays when re-entering the section
     progressBar.style.width = '0%';
     
-    // Trigger animation after a small delay
+ 
     setTimeout(() => {
       progressBar.style.width = `${percentage}%`;
     }, 100);
   });
 }
 
-// Initialize the 3D cube rotation
+
 document.addEventListener('DOMContentLoaded', () => {
   const cube = document.querySelector('.cube');
   
   if (cube) {
     // Enable mouse interaction with the cube
     document.addEventListener('mousemove', (e) => {
-      const xRotation = -10 + (e.clientY / window.innerHeight) * 20; // -10 to 10 degrees
-      const yRotation = -10 + (e.clientX / window.innerWidth) * 20; // -10 to 10 degrees
+      const xRotation = -10 + (e.clientY / window.innerHeight) * 20; 
+      const yRotation = -10 + (e.clientX / window.innerWidth) * 20; 
       
       // Apply the rotation with the base animation
       cube.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg) rotate3d(1, 1, 1, ${Date.now() / 10000}rad)`;
@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
-  // Animate timeline items on scroll
   const timelineItems = document.querySelectorAll('.timeline-item');
   
   const animateOnScroll = () => {
@@ -91,24 +90,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
   
-  // Initialize timeline items
   timelineItems.forEach(item => {
     item.style.opacity = '0';
     item.style.transform = 'translateX(-20px)';
-    item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    item.style.transition = 'opacity 0.8s ease, transform 0.5s ease';
   });
   
-  // Check for scroll
   window.addEventListener('scroll', animateOnScroll);
   
-  // Initial check
   animateOnScroll();
   
-  // Add particle background effect to the home section (light version)
   const homeSection = document.getElementById('home');
   
   if (homeSection) {
-    // Create a canvas element
+    
     const canvas = document.createElement('canvas');
     canvas.classList.add('particles-canvas');
     canvas.style.position = 'absolute';
@@ -146,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     
-    // Animate particles
     function animateParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
@@ -162,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
         p.x += p.speedX;
         p.y += p.speedY;
         
-        // Bounce off walls
         if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
         if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
       }
@@ -170,7 +163,15 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(animateParticles);
     }
     
-    // Start animation
+
     animateParticles();
   }
 });
+  document.addEventListener("DOMContentLoaded", () => {
+    const skills = document.querySelectorAll('.skill-item');
+    skills.forEach(skill => {
+      const percent = skill.getAttribute("data-percentage");
+      const bar = skill.querySelector(".progress-bar");
+      bar.style.width = percent + "%";
+    });
+  });

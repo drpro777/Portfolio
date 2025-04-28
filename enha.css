@@ -67,7 +67,7 @@
   /* Enhanced 3D Elements */
   .skill-card {
     transform-style: preserve-3d;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s ease;
   }
   
   .skill-card:hover {
@@ -104,13 +104,13 @@
       transform: translateX(100%) rotate(45deg);
     }
   }
-  
-  /* Smooth Scroll */
+
   html {
     scroll-behavior: smooth;
+    transition: 0.2s ease-in-out;
   }
   
-  /* Enhanced Timeline */
+ 
   .timeline-item {
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
